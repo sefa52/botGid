@@ -110,9 +110,7 @@ def send_location(chat_id):
         markup = types.InlineKeyboardMarkup(row_width=1)
         
         # Кнопка со ссылкой на Яндекс.Карты (интеграция маршрута)
-        if map_url:
-            btn_map = types.InlineKeyboardButton("🗺️ Смотреть маршрут на карте", url=map_url)
-            markup.add(btn_map)
+     
             
         btn_retry = types.InlineKeyboardButton("🔄 Мне не нравится, давай другое", callback_data="action_retry")
         btn_restart = types.InlineKeyboardButton("🏁 Начать сначала", callback_data="action_restart")
